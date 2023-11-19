@@ -1,7 +1,8 @@
 "use client";
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'src/app/adminstyles/admin1.css';
+import Image from 'next/image';
 import {
   faChartLine,
   faUserPlus,
@@ -13,8 +14,45 @@ import {
 
    // Changed from faRightFromBracket
 } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
 
-export default function Admin() {
+export default function Admin () {
+const [attendanceData, setAttendanceData] = useState<ProductType[]>([]);
+type ProductRowProps = {
+  attendanceItem: ProductType;
+  
+  key: React.Key; // You can use 'React.Key' for the type of 'key'
+};
+type ProductType = {
+  _id: string,
+  employee_id: string;
+  time_in: string;
+  time_out: string;
+  date: string;
+};
+function AttendanceRow({ attendanceItem }: ProductRowProps) {
+  return (
+    <tr>
+      <td>{attendanceItem.employee_id}</td>
+      <td>{attendanceItem.date}</td>
+      <td>{attendanceItem.time_in}</td>
+      <td>{attendanceItem.time_out}</td>
+    </tr>
+  );
+}
+useEffect(() => {
+  getAttendanceData(); // Fetch attendance data when the component mounts
+}, []);
+const getAttendanceData = async () => {
+  try {
+    const res = await axios.get('/api/users/admin'); // Replace with your actual endpoint
+    setAttendanceData(res.data.admin);
+  } catch (error: any) {
+    console.error(error.message);
+    // Handle error
+  }
+};
+
   return (
     <div>
     <div className="Sidebar">
@@ -23,7 +61,7 @@ export default function Admin() {
       <ul>
         <li>
         <a href="#" className="logo">
-              <img
+              <Image
                   src="/images/logo.png"
                   width={50}
                   height={50}
@@ -105,7 +143,14 @@ export default function Admin() {
                 <th>Time Out</th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>  
+							{attendanceData.map((attendanceItem) => (
+								<AttendanceRow
+									key={attendanceItem._id}
+									attendanceItem={attendanceItem}
+								/>
+							))}
+            </tbody>
           </table>
        
       </div>
@@ -117,9 +162,8 @@ export default function Admin() {
                           <span className="nav-item"></span>
           </button>
         </form>
-        </div>
+              </div>
       </div>
     </div>
   );
 };
-

@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/navigation";
 import "src/styles/pdf.css";
 import axios from "axios";
-import { NextResponse } from "next/server";
 import html2canvas from "html2canvas";
 import { toast } from "react-hot-toast";
+import Image from "next/image";
 import {
   faClipboardUser,
   faReceipt,
@@ -17,7 +17,7 @@ import {
   faDownload,
 } from "@fortawesome/free-solid-svg-icons";
 import jsPDF from "jspdf";
-import "src/styles/pdf.css";
+
 import { Philosopher } from "next/font/google";
 
 // Define a style for the cursor
@@ -25,7 +25,7 @@ const cursorToPointer = {
   cursor: "pointer",
 };
 
-export default function PDFGenerator() {
+const PDFGenerator = () => {
   const months = [
     'January', 'February', 'March', 'April',
     'May', 'June', 'July', 'August',
@@ -62,7 +62,6 @@ export default function PDFGenerator() {
     // Check if both selectedMonth and selectedPeriod have values
     if (selectedMonth && selectedPeriod) {
       getPayslip();
-      
     }
   }, [selectedMonth, selectedPeriod]);
   const handleMonthChange = (event) => {
@@ -157,7 +156,12 @@ export default function PDFGenerator() {
         <ul>
           <li>
             <a href="#" className="logo">
-              <img src="/images/logo.png" alt="" />
+            <Image
+								src="/images/logo.png"
+								width={50}
+								height={50}
+								alt="Picture of the author"
+							/>
               <span className="nav-e">Employee</span>
             </a>
           </li>
@@ -217,24 +221,7 @@ export default function PDFGenerator() {
         </div>
 
               <div className="company-name">WB MAJESTY</div>
-              <div>
-                <label htmlFor="monthSelect">Select a Month:</label>
-                <select id="monthSelect" value={selectedMonth} onChange={handleMonthChange}>
-                  <option value="" disabled>-- Select Option --</option>
-                  {months.map((month, index) => (
-                    <option key={index} value={month}>{month}</option>
-                  ))}
-                </select>
-                </div>
-                <div>
-                <label htmlFor="periodSelect">Select a Period:</label>
-                <select id="periodSelect" value={selectedPeriod} onChange={handlePeriodChange}>
-                  <option value="" disabled>-- Select Option --</option>
-                  {periods.map((period, index) => (
-                    <option key={index} value={period}>{period}</option>
-                  ))}
-                </select>
-              </div>
+        
               {/* Employee information */}
               <div className="employee-info">
                 <p>Employee Information</p>
@@ -309,13 +296,36 @@ export default function PDFGenerator() {
       
 
           </div>
-          <button onClick={generatePayslip}><FontAwesomeIcon icon={faDownload} className="fas-download" /> </button>
-        </div>
+          <button onClick={generatePayslip}><FontAwesomeIcon icon={faDownload} className="fas-download" /><p>Download</p> </button>
 
+          <div className="Selection-Container">
+          <div className="MonthSelection">
+                <label htmlFor="monthSelect">Select a Month:</label>
+                <select id="monthSelect" value={selectedMonth} onChange={handleMonthChange}>
+                  <option value="" disabled>-- Select Option --</option>
+                  {months.map((month, index) => (
+                    <option key={index} value={month}>{month}</option>
+                  ))}
+                </select>
+                </div>
+                <div  className="PeriodSelection" >
+                <label htmlFor="periodSelect">Select a Period:</label>
+                <select id="periodSelect" value={selectedPeriod} onChange={handlePeriodChange}>
+                  <option value="" disabled>-- Select Option --</option>
+                  {periods.map((period, index) => (
+                    <option key={index} value={period}>{period}</option>
+                  ))}
+                </select>
+                </div>
+                </div>
+        </div>
+       
+
+              </div>
       </div>
 
-    </div>
+
   );
 };
 
-
+export default PDFGenerator;

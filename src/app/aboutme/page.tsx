@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'src/styles/aboutme.css';
+import Image from 'next/image';
 import {
   faClipboardUser,
   faReceipt,
@@ -73,7 +74,7 @@ export default function AboutMePage() {
 
   const [formData, setFormData] = useState({
     //basic info
-    status: 'asd',
+    status: '',
     religion: '',
     birthpalce:'',
     Phone:'',
@@ -147,7 +148,13 @@ export default function AboutMePage() {
         <ul>
           <li>
             <a href="#" className="logo">
-              <img src="/images/logo.png" alt="" />
+          
+<Image
+                  src="/images/logo.png"
+                  width={50}
+                  height={50}
+                  alt="Picture of the author"
+              />
               <span className="nav-e">Employee</span>
             </a>
           </li>
@@ -245,7 +252,7 @@ export default function AboutMePage() {
           </>
         ) : (
           <>
-            <span>asdadas</span>
+            <span></span>
             <button onClick={() => handleEditClick('religion')}>Edit</button>
           </>
         )}
@@ -565,22 +572,22 @@ export default function AboutMePage() {
       </div>
 
             <div className="form-group">
-              <label>Father's Attainment</label>
+              <label>{"Father's Attainment"}</label>
               <span id="Father_Attainment">user input</span>
             </div>
 
             <div className="form-group">
-              <label>Mother's Attainment</label>
+              <label>{"Mother's Attainment"}</label>
               <span id="Mother_Attainment">user input</span>
             </div>
             
             <div className="form-group">
-             <label>Father's Occupation</label>
+             <label>{"Father's Occupation"}</label>
               <span id="Mother_Attainment">user input</span>
             </div>
             
             <div className="form-group">
-              <label>Mother's Occupation</label>
+              <label>{"Mother's Occupation"}</label>
               <span id="Mother_Attainment">user input</span>
             </div>
               </div>

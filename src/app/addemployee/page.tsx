@@ -17,7 +17,7 @@ import "src/styles/addemployee.css";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import axios from "axios";
-
+import Image from 'next/image';
 export default function Addnew() {
   const router = useRouter();
   const [user, setUser] = React.useState({
@@ -58,7 +58,7 @@ export default function Addnew() {
         <ul>
           <li>
             <a href="#" className="logo">
-              <img
+              <Image
                   src="/images/logo.png"
                   width={50}
                   height={50}

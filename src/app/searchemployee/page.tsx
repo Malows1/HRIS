@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
 import 'src/app/adminstyles/searchem.css';
 import {
     faChartLine,
@@ -17,7 +18,7 @@ import {
     faHistory,
     faReceipt// Changed from faRightFromBracket
   } from '@fortawesome/free-solid-svg-icons';
-  export default function About() {
+  export default function About () {
   const [activeNavItem, setActiveNavItem] = useState(0);
 
   const navItems = [
@@ -138,7 +139,7 @@ import {
         <ul>
           <li>
           <a href="#" className="logo">
-              <img
+              <Image
                   src="/images/logo.png"
                   width={50}
                   height={50}
@@ -198,7 +199,7 @@ import {
       </div>
      
       <div className="box1">
-      <img src="logo.jpg" alt="" />
+   
      
             <p>Employee</p>
       
@@ -483,7 +484,7 @@ import {
       </div>
 
       <div className="form-group">
-        <label>Father's Attainment:</label>
+        <label>{"Father's Attainment:"}</label>
         {editMode.F_Attainment ? (
           <>
             <input
@@ -506,7 +507,7 @@ import {
 
      
       <div className="form-group">
-        <label>Mother's Attainment:</label>
+        <label>{"Mother's Attainment:"}</label>
         {editMode.M_Attainment ? (
           <>
             <input
@@ -529,7 +530,7 @@ import {
 
             
       <div className="form-group">
-        <label>Father's Occupation:</label>
+        <label>{"Father's Occupation:"}:</label>
         {editMode.F_Occupation ? (
           <>
             <input
@@ -551,7 +552,7 @@ import {
       </div>
 
       <div className="form-group">
-        <label>Mother's Occupation:</label>
+        <label>{"Mother's Occupation:"}</label>
         {editMode.M_Occupation ? (
           <>
             <input
@@ -820,6 +821,3 @@ import {
     }
   }
 };
-
-
-

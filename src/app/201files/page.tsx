@@ -12,6 +12,7 @@ import {
     faCancel
 } from '@fortawesome/free-solid-svg-icons';
 import {useRouter} from "next/navigation";
+import Image from 'next/image';
 import axios from 'axios';
 import toast from "react-hot-toast"
 
@@ -57,7 +58,12 @@ export default  function Files(){
                 <ul>
                     <li>
                         <a href="#" className="logo">
-                            <img src="/images/logo.png" alt="" />
+                        <Image
+                  src="/images/logo.png"
+                  width={50}
+                  height={50}
+                  alt="Picture of the author"
+              />
                             <span className="nav-e">Employee</span>
                         </a>
                     </li>

@@ -6,14 +6,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Josefin sans', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif; 
   text-decoration: none;
 }
 
 body {
-  font-family: 'Josefin Sans', sans-serif; 
-  color: #333; 
-  background: linear-gradient(to bottom, #2980b9    , #b5daf1);
+
+  color: #333;
+  background: #f2f2f2;
   background-attachment: fixed; 
 
 height: 100vh;
@@ -23,71 +23,64 @@ height: 100vh;
 .Sidebar {
   position: fixed;
   top: 0;
-  left: 0; 
+  left: 0;
   height: 100%;
-  width: 250px; 
-  background: linear-gradient(to bottom, #2980b9, #b5daf1);
-  color: #fff; 
-  overflow-y: auto; 
-  box-shadow: 0 0 11px rgba(0, 0, 0, 0.3); 
-
+  width: 250px;
+  background: #333; /* Dark Gray */
+  color: #fff; /* White text on dark background */
+  overflow-y: auto;
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
 }
-
 
 .Sidebar a {
   padding: 7px;
   display: block;
-  color: #fff;
+  color: #ffffff; /* Dark Gray */
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
 .Sidebar a:hover {
-  background-color: #3498db; 
+  background-color: #666; /* Gray */
 }
 
 .logo {
   text-align: center;
   display: flex;
   align-items: center;
-  
   margin: 20px 0;
 }
+
 .logo img {
   width: 80px;
   height: 80px;
-margin-left: 70px;}
-
+  margin-left: 70px;
+}
 
 .logo span {
   font-weight: bold;
   margin-top: 0px;
   padding: 8px;
-  
-  color: #fff; 
-
+  color: #fffefe; /* Dark Gray */
   font-size: 18px;
   text-transform: uppercase;
 }
 
-
-
 a {
   position: relative;
-  color: #fff; 
+  color: #333; /* Dark Gray */
   font-size: 18px;
-  display: block; 
-  padding: 12px 20px; 
+  display: block;
+  padding: 12px 20px;
 }
 
 .fas {
   position: relative;
   width: 30px;
   height: 30px;
-  margin-top: 40px; 
+  margin-top: 40px;
   top: 14px;
   margin-left: 16px;
-  
   font-size: 20px;
   text-align: center;
 }
@@ -97,15 +90,14 @@ a {
   top: -10px;
   margin-left: 70px;
   display: flex;
-  
   flex-direction: column;
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
-.nav-item:hover{
+.nav-item:hover {
   transform: translateY(-8px);
-
 }
+
 .logo img {
   width: 70px;
   height: 70px;
@@ -115,44 +107,30 @@ a {
   font-weight: bold;
   margin-top: 30px;
   padding: 8px;
-  
-  color: #fff; 
-
+  color: #333; /* Dark Gray */
   font-size: 18px;
   text-transform: uppercase;
 }
 
-
-
 a {
   position: relative;
-  color: #fff; 
+  color: #333; /* Dark Gray */
   font-size: 18px;
-  display: block; 
-  padding: 12px 20px; 
+  display: block;
+  padding: 12px 20px;
 }
 
-
-a {
-  position: relative;
-  color: rgb(255, 255, 255);
-  font-size: 18px;
-  display: table;
-
-  padding: 12px;
-}
-.logout{
+.logout {
   width: 100%;
-    position: absolute ;
-    bottom: 0;
+  position: absolute;
+  bottom: 0;
 }
-
 
 .container {
   position: absolute;
-  width: 500px;
-  height: 150px;
-  background-color: #7dc3f1;
+  width: 100vh;
+  height: 350px;
+  background-color: #333;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -165,9 +143,9 @@ a {
 .container p{
   position: absolute;
   font-size: 20px;
-  top:90px;
+  top:200px;
   text-align: center;
-  margin: 6px 20px;
+  margin: 6px 90px;
   color: #fff;
 }
 
@@ -196,7 +174,9 @@ a {
   th {
     background-color: #f2f2f2;
   }
- 
+.mainbtn{
+  border: 1px solid gray;
+ }
   .content-active {
  
   position: relative;
@@ -236,15 +216,16 @@ a {
 .fas-button {
   position: relative;
   left: 5px;
-  margin: 30px 50px ;
-  height: 50px; 
+
+  margin: 120px 100px ;
+  height: 70px; 
   color: #ffffff;
   font-size: 20px;
 
 } 
 
 button:hover{
-  transform: translateY(-8px);
+  transform: translateY(1px);
 }
  
 

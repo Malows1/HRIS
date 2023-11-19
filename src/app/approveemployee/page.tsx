@@ -2,6 +2,7 @@
  import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'src/app/adminstyles/approve.css';
+import Image from 'next/image';
 import {
     faChartLine,
     faReceipt,
@@ -43,7 +44,12 @@ export default function SignupPage() {
                 <ul>
                     <li>
                         <a href="#" className="logo">
-                            <img src="/images/logo.png" alt="" />
+                        <Image
+                  src="/images/logo.png"
+                  width={50}
+                  height={50}
+                  alt="Picture of the author"
+              />
                             <span className="nav-e">Admin</span>
                         </a>
                     </li>
@@ -84,7 +90,7 @@ export default function SignupPage() {
                     <li>
                         <a href="/report">
                             <FontAwesomeIcon icon={faHistory} className="fas" />
-                            <span className="nav-item">Report</span>
+                            <span className="nav-item">report</span>
                         </a>
                     </li>
 
@@ -153,9 +159,9 @@ export default function SignupPage() {
                 <input type="text" id="Note" />
             </div>
             </form>
-                    <button onClick={handleSwitchUIMode}> <FontAwesomeIcon icon={faLeftLong} className="fas-back" /></button>
-                    <button onClick={handleSwitchUIMode}> <FontAwesomeIcon icon={faCheck} className="fas-check" /></button>
-                    <button onClick={handleSwitchUIMode}> <FontAwesomeIcon icon={faTimes} className="fas-times" /></button>
+                    <button onClick={handleSwitchUIMode}> <FontAwesomeIcon icon={faLeftLong} className="fas-back" /><p>Previous</p></button>
+                    <button onClick={handleSwitchUIMode}> <FontAwesomeIcon icon={faCheck} className="fas-check" /><p>Approve</p></button>
+                    <button onClick={handleSwitchUIMode}> <FontAwesomeIcon icon={faTimes} className="fas-times" /><p>Deny</p></button>
                 </div>
             )}
         </div>

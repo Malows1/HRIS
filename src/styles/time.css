@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-
 
 * {
   margin: 0;
@@ -12,11 +10,11 @@
 
 body {
   color: #333;
-  background: #f2f2f2; 
-  background-attachment: fixed; 
-  
-height: 100vh;
-
+  background: #f2f2f2; /* Dirty White */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Sidebar {
@@ -30,8 +28,6 @@ height: 100vh;
   overflow-y: auto;
   box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
 }
-
-
 
 .Sidebar a {
   padding: 7px;
@@ -126,111 +122,36 @@ a {
   position: absolute;
   bottom: 0;
 }
-
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 5px;
+h2{
+    font-size: 40px;
+}
+.clock{
+    color: #ffffff;
+    font-size: 25px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
- 
-  h1 {
-  color: #020202;
-  font-size: 30px;
-  font-weight: bold;
+   margin: 2px 4px;
     text-align: center;
-  }
+    
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-
-  th,
-  td {
-    color: #0a0a0a;
-    border: 1px solid rgb(138, 134, 134);
-    padding: 10px;
-    text-align: left;
-  }
-
-  th {
-    background-color: #f2f2f2;
-  }
-  .fass {
+}
+.Clock-container {
+    background-color: #333; 
+    padding: 20px; 
     position: relative;
- 
-    margin-left: 16px;
-    font-size: 20px;
-    text-align: center;
+    left: 100px;
+  
+    border-radius: 10px;
+    height: 40vh;
+    width: 50vh;
   }
-  .content-active {
- 
-  position: relative;
-  top:50px;
-  background-color: #fff;
-    max-width: 450px;
-    margin: 0 auto;
-    padding: 50px;
-    border: 2px solid #000000;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-
-.content-active .form-group {
-    margin-bottom: 16px;
-}
-
-.content-active label {
-    display: block;
+  .Clock-container button {
+    font-size: 20px;
+    position: relative;
     font-weight: bold;
-}
-
-
-.content-active input {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-
-    margin: 10px;
-
-    border-radius: 5px;
-    background: transparent;
-    border: 2px solid rgb(0, 0, 0);
-}
-
-.fas-back {
-  position: relative;
- height: 40px;
- left: 10px;
- margin: 10px 30px;
-  font-size: 20px;
-  text-align: center;
-}
-button  p{
-  position: relative;
-  font-size: 18px;
-  margin: 1px 20px;
- left: 20px;
-  color: rgb(5, 5, 5);
-}
-.fas-check {
-  position: relative;
- height: 40px;
- left: 25px;
- margin: 10px 30px;
-  font-size: 20px;
-  text-align: center;
-}
-.fas-times {
-  position: relative;
-  left: 30px;
-  height: 40px;
-  margin: 10px 30px;
-  font-size: 20px;
-  text-align: center;
-}
+    height: 50px;
+    width: 120px;
+    border-radius: 10px;
+    margin: 100px 160px;
+background-color: #f2f2f2;
+    /* Add any additional styles as needed */
+  }

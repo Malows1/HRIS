@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRouter } from 'next/navigation';
 import 'src/app/adminstyles/process_payslip.css';
 import axios from "axios";
+import Image from "next/image";
 import { toast } from "react-hot-toast";
 import {
   faRightFromBracket,
@@ -135,7 +136,7 @@ export default function ProcessPage() {
   }, [payslipData]);
   const getAttendanceData = async () => {
     try {
-      const res = await axios.get('/api/users/paysliproutes/process-info'); // Replace with your actual endpoint
+      const res = await axios.get('/api/users/process'); // Replace with your actual endpoint
       setuserData(res.data.user); // Assuming the response contains an array of attendance data
       
     } catch (error: any) {
@@ -154,7 +155,7 @@ export default function ProcessPage() {
         <ul>
           <li>
             <a href="#" className="logo">
-              <img
+              <Image
                 src="/images/logo.png"
                 width={50}
                 height={50}
