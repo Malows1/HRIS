@@ -17,7 +17,7 @@ import {
     faHistory,
     faReceipt// Changed from faRightFromBracket
   } from '@fortawesome/free-solid-svg-icons';
-const about = () => {
+  export default function About() {
   const [activeNavItem, setActiveNavItem] = useState(0);
 
   const navItems = [
@@ -821,5 +821,5 @@ const about = () => {
   }
 };
 
-export default about;
+
 

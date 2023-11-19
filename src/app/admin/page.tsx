@@ -14,7 +14,7 @@ import {
    // Changed from faRightFromBracket
 } from '@fortawesome/free-solid-svg-icons';
 
-const Admin = () => {
+export default function Admin() {
   return (
     <div>
     <div className="Sidebar">
@@ -123,4 +123,3 @@ const Admin = () => {
   );
 };
 
-export default Admin;

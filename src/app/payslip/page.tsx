@@ -25,7 +25,7 @@ const cursorToPointer = {
   cursor: "pointer",
 };
 
-const PDFGenerator = () => {
+export default function PDFGenerator() {
   const months = [
     'January', 'February', 'March', 'April',
     'May', 'June', 'July', 'August',
@@ -318,4 +318,4 @@ const PDFGenerator = () => {
   );
 };
 
-export default PDFGenerator;
+

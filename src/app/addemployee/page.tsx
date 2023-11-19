@@ -18,7 +18,7 @@ import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import axios from "axios";
 
-export default function addnew() {
+export default function Addnew() {
   const router = useRouter();
   const [user, setUser] = React.useState({
     name: "",
