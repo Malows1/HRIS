@@ -1,0 +1,304 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin sans', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif; 
+  color: #333; 
+  background: linear-gradient(to bottom, #2980b9    , #b5daf1);
+  background-attachment: fixed; 
+
+height: 100vh;
+
+}
+
+.Sidebar {
+  position: fixed;
+  top: 0;
+  left: 0; 
+  height: 100%;
+  width: 250px; 
+  background: linear-gradient(to bottom, #2980b9, #b5daf1);
+  color: #fff; 
+  overflow-y: auto; 
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.3); 
+
+}
+
+
+.Sidebar a {
+  padding: 7px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.Sidebar a:hover {
+  background-color: #3498db; 
+}
+
+.logo {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  
+  margin: 20px 0;
+}
+.logo img {
+  width: 80px;
+  height: 80px;
+margin-left: 70px;}
+
+
+.logo span {
+  font-weight: bold;
+  margin-top: 0px;
+  padding: 8px;
+  
+  color: #fff; 
+
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+
+
+a {
+  position: relative;
+  color: #fff; 
+  font-size: 18px;
+  display: block; 
+  padding: 12px 20px; 
+}
+
+.fas {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-top: 40px; 
+  top: 14px;
+  margin-left: 16px;
+  
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav-item {
+  position: relative;
+  top: -10px;
+  margin-left: 70px;
+  display: flex;
+  
+  flex-direction: column;
+  flex-grow: 1; 
+}
+
+.nav-item:hover{
+  transform: translateY(-8px);
+
+}
+.logo img {
+  width: 70px;
+  height: 70px;
+}
+
+.logo span {
+  font-weight: bold;
+  margin-top: 30px;
+  padding: 8px;
+  
+  color: #fff; 
+
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+
+
+a {
+  position: relative;
+  color: #fff; 
+  font-size: 18px;
+  display: block; 
+  padding: 12px 20px; 
+}
+
+
+a {
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  display: table;
+
+  padding: 12px;
+}
+.logout{
+  width: 100%;
+    position: absolute ;
+    bottom: 0;
+}
+
+
+.container {
+  position: absolute;
+  width: 500px;
+  height: 150px;
+  background-color: #7dc3f1;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -50%);
+}
+.container p{
+  position: absolute;
+  font-size: 20px;
+  top:90px;
+  text-align: center;
+  margin: 6px 20px;
+  color: #fff;
+}
+
+ 
+  h1 {
+  color: #020202;
+  font-size: 30px;
+  font-weight: bold;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th,
+  td {
+    color: #0a0a0a;
+    border: 1px solid rgb(138, 134, 134);
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+ 
+  .content-active {
+ 
+  position: relative;
+  top:50px;
+  background-color: #fff;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 50px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.content-active .form-group {
+    margin-bottom: 16px;
+}
+
+.content-active label {
+    display: block;
+    font-weight: bold;
+}
+
+
+.content-active input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+
+    margin: 10px;
+
+    border-radius: 5px;
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+.fas-button {
+  position: relative;
+  left: 5px;
+  margin: 30px 50px ;
+  height: 50px; 
+  color: #ffffff;
+  font-size: 20px;
+
+} 
+
+button:hover{
+  transform: translateY(-8px);
+}
+ 
+
+
+
+.container-nextui {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.fas-attendance {
+  position: relative;
+  left: 1px;
+ 
+
+  height: 25px;
+  margin: 20px ;
+ 
+ 
+} 
+.container-nextui button{
+ 
+
+  margin: 7px;
+  height: 50px;
+
+}
+.mainbtn {
+
+
+  margin: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+
+.container-nextui p{
+font-size: 16px;
+font-weight: bold;
+position: relative;
+
+top:-30px;
+
+margin: 8px 7px;
+}
+
+.Payslip th{
+
+  font-size: 12px;
+  font-weight: bold;
+  
+}
